@@ -5,7 +5,7 @@ const cookieSession = require("cookie-session");
 const dbConfig = require("./app/config/db.config");
 
 const app = express();
-
+console.log("simple change");
 app.use(cors());
 /* for Angular Client (withCredentials) */
 // app.use(
