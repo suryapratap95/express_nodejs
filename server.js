@@ -33,7 +33,7 @@ const db = require("./app/models");
 const Role = db.role;
 
 db.mongoose
-  .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+  .connect(`mongodb+srv://SuryaSingh095:EyXLF2U5udIQKtUG@trueweb3.1u56fq7.mongodb.net/?retryWrites=true&w=majority&appName=TrueWeb3`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
