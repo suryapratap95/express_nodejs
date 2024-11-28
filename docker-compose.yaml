@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - MONGODB_URI=mongodb+srv://SuryaSingh095:EyXLF2U5udIQKtUG@trueweb3.1u56fq7.mongodb.net/?retryWrites=true&w=majority&appName=TrueWeb3
+      - COOKIE_SECRET=my_cookie_secret
+    restart: unless-stopped
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
