@@ -1,6 +1,9 @@
 # Use official Node.js LTS image as base
 FROM node:20-alpine
 
+# Install build dependencies
+RUN apk add --no-cache python3 make g++
+
 # Set working directory in the container
 WORKDIR /app
 
